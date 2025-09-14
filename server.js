@@ -22,7 +22,7 @@ app.use(cors());
 // Health check per Render
 app.get('/', (req, res) => {
     res.json({ 
-        message: 'Ucronie e Tesori Server Online',
+        message: 'Rinascimento Oscuro Server Online',
         status: 'ok',
         sessions: sessions.size,
         timestamp: new Date().toISOString()
@@ -49,7 +49,7 @@ io.on('connection', (socket) => {
     console.log('Client connected:', socket.id);
 
     socket.on('create_session', (data, callback) => {
-        const sessionId = 'ucronie-' + Math.random().toString(36).substring(2, 8);
+        const sessionId = 'rinascimento-' + Math.random().toString(36).substring(2, 8);
         sessions.set(sessionId, {
             id: sessionId,
             masterId: null,
@@ -176,5 +176,5 @@ app.get('/sessions', (req, res) => {
 });
 
 server.listen(PORT, () => {
-    console.log(`🎲 Ucronie e Tesori server running on port ${PORT}`);
+    console.log(`🎲 Rinascimento Oscuro server running on port ${PORT}`);
 });
