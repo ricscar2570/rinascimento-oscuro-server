@@ -1,0 +1,14 @@
+{
+  "name": "rinascimento-oscuro-server",
+  "version": "1.0.0",
+  "description": "Server per il gioco di ruolo multiplayer Rinascimento Oscuro",
+  "main": "rinascimento_server.js",
+  "scripts": {
+    "start": "node rinascimento_server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "socket.io": "^4.7.5"
+  }
+}
